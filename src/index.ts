@@ -68,7 +68,7 @@ const kholloscope: WeekSlot[][] = [
     [kholle("Anglais", "Chahed", 2, 11, "61D"), kholle("Maths", "Boyer", 5, 16, "226")],
     [kholle("Physique", "M. Graye", 4, 18, "633"), switchTo("diamond")],
     [kholle("Anglais", "Chahed", 4, 18, "61F"), kholle("Maths", "Plazat", 3, 16, "114")],
-    [kholle("Physique", "Olive", 1, 18, "413"), kholle("Maths", "Adak", 2, 17, "214")],
+    [kholle("Physique", "Olive", 1, 18, "413"), kholle("Maths", "Adak", 3, 17, "214")],
     [kholle("Anglais", "Guède", 4, 18, "63A"), kholle("Maths", "M. Simon", 5, 12, "112")],
     [kholle("Physique", "Brès", 5, 13, "428")],
     [kholle("Maths", "M. Correia", 3, 13, "226"), kholle("Anglais", "Tanet", 3, 17, "5E4")],
