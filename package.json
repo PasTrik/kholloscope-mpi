@@ -1,0 +1,14 @@
+{
+  "name": "kholles-helper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
