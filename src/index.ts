@@ -52,7 +52,7 @@ type Vacation = {
 // Données
 
 const GROUP_COUNT = 14;
-const NOMBRE_SEMAINES = 7;
+const NOMBRE_SEMAINES = 14;
 
 function kholle(matiere: Subject, kholleur: Examiner, jour: Weekday, heure: Hour, salle: Room): Kholle {
     return {kind: "kholle", matiere, kholleur, jour, heure, salle};
@@ -70,7 +70,7 @@ const kholloscope: WeekSlot[][] = [
     [kholle("Anglais", "Chahed", 4, 18, "61F"), kholle("Maths", "Plazat", 3, 16, "114")],
     [kholle("Physique", "Olive", 1, 18, "413"), kholle("Maths", "Adak", 3, 17, "214")],
     [kholle("Anglais", "Guède", 4, 18, "63A"), kholle("Maths", "M. Simon", 5, 12, "112")],
-    [kholle("Physique", "Brès", 5, 13, "428")],
+    [kholle("Physique", "Brès", 5, 12, "428")],
     [kholle("Maths", "M. Correia", 3, 13, "226"), kholle("Anglais", "Tanet", 3, 17, "5E4")],
     [kholle("Physique", "M. Graye", 1, 18, "633"), kholle("Maths", "Boyer", 5, 17, "226")],
     [kholle("Anglais", "Brigaudeau", 1, 18, "61E"), switchTo("club")],
@@ -211,7 +211,7 @@ function khollesDuGroupe(groupe: number, occurrence: number, lundi: Date): IcsEv
                 evenements.push(creerEvenementCoeurSansCible(lundi));
                 continue;
             }
-            return khollesDuGroupe(groupeCible, occurrence, lundi);
+            return khollesDuGroupe(groupeCible, occurrence, lundi).filter(k => !k.title.toLowerCase().includes("maths"));
         }
 
         evenements.push(creerEvenementChoix(lundi, switchChoices[creneau.symbol]));
